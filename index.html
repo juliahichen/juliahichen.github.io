@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="en"  class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html lang="en" ng-app="portfolioApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html lang="en" ng-app="portfolioApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="portfolioApp" class="no-js"> <!--<![endif]-->
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Julia Chen</title>
+    <meta name="description" content="Hello, I'm Julia.">
+    <meta name="author" content="Julia Chen">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+
+    <link rel="stylesheet" href="stylesheets/animate.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Vollkorn' type='text/css'>
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Merriweather' type='text/css'>
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Karla:300,400,700' type='text/css'>
+
+    <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <script type="text/javascript">
+    setTimeout(function(){var a=document.createElement("script");
+    var b=document.getElementsByTagName("script")[0];
+    a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0035/6666.js?"+Math.floor(new Date().getTime()/3600000);
+    a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+    </script>
+    <script src="//load.sumome.com/" data-sumo-site-id="c79ad1cd11f7882e790c313750196c61620b1f8c38c3ed8fd0c3f1721567adc3" async="async"></script>
+</head>
+
+<body ng-controller="MainCtrl" my-scroll>
+    <!-- Header -->
+    <div class="container">
+        <hr style="opacity:0;" class="margin0 margin-20"/>
+        <div class="four columns">
+            <a href="#"><h3 id="home">Julia Chen</h3></a>
+        </div>         
+        <div style="opacity:0;" class="four columns">
+            <h5 class="invisible">hello!</h5>
+        </div>
+        <div id="nav" class="eight columns">
+            <a href="mailto:hello@julia-chen.com?subject=Hello!"><div><h4 class="link">Contact</h4></div></a>
+            <a href="#/resume"><h4 class="link" ng-class="{current:isActive('/resume')}">Resume</h4></a>
+            <a href="#"><h4 class="link" ng-class="{current:isMain()}">Portfolio</h4></a>
+        </div>
+        <hr style="opacity:0;" class="margin0 margin-0"/>
+        <hr style="opacity:0;" class="margin0 margin-10"/>
+    </div>
+
+    <!-- Views -->
+    <div id="main" ng-view></div>
+
+    <!-- Footer -->
+    <footer class="animated fadeIn">
+        <div class="container">
+            <hr style="opacity:0.05;" class="margin100 margin-40"/>
+
+            <div class="five columns">
+                <h4 ng-show="isMain()">Julia Chen</h4>
+                <a ng-show="!isMain()" class="back-to-portfolio" href="#"><h4><i class="fa fa-long-arrow-left"></i> Back to portfolio</h4></a>
+            </div>
+
+            <div style="opacity:0;" class="seven columns">
+                <p>.</p>
+            </div>
+            
+            <div class="five columns">
+                <ul id="social">
+                    <li><a href="mailto:hello@julia-chen.com?subject=Hello!"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="//linkedin.com/in/juliachenatucsb" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="//pinterest.com/hellojuliachen/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                    <li><a href="//github.com/juliahichen" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+                </ul>
+            </div>
+        </div>  
+        <hr style="opacity:0;" class="margin40 margin-0"/>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-animate.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- End Document
+    ================================================== -->
+</body>
+</html>
